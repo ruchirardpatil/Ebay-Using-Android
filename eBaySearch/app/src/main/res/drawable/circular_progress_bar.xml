@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background for progress bar (Grey Circle) -->
+    <item>
+        <shape android:shape="ring"
+            android:innerRadiusRatio="2.5"
+            android:thicknessRatio="15.0"
+            android:useLevel="false">
+            <solid android:color="#D3D3D3"/>
+        </shape>
+    </item>
+
+    <!-- Foreground for progress bar (Filled Circle up to 50%) -->
+    <item>
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270">
+            <shape android:shape="ring"
+                android:innerRadiusRatio="2.5"
+                android:thicknessRatio="15.0"
+                android:useLevel="true">
+                <!-- Change this color to your preference -->
+                <solid android:color="#E41607"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

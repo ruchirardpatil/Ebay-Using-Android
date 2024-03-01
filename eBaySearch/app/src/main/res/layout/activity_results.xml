@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ResultsActivity"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/search_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textViewNoResult"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="No Result found"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:background="@drawable/rounded_grey_background"
+            android:visibility="gone"
+            android:padding="3dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textViewLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Searching Products..."
+            android:layout_marginTop="10dp"
+            android:textColor="@color/purple_500"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recycler_view_results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"/>
+
+</FrameLayout>

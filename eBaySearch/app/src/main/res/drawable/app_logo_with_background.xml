@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The background color for the logo -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#6200EE"/> <!-- Replace with the exact purple color you want -->
+        </shape>
+    </item>
+
+    <!-- The shopping icon, centered in the drawable -->
+<!--    <item android:drawable="@drawable/app_logo"-->
+<!--        android:gravity="center"/>-->
+
+    <item
+        android:drawable="@drawable/app_logo"
+        android:width="72dp"
+        android:height="72dp"
+        android:gravity="center" />
+
+</layer-list>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/shipping_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/textViewLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetching Shipping Details..."
+            android:layout_marginTop="10dp"
+            android:textColor="@color/purple_500"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/truck"
+                android:paddingRight="8dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sold By"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <!-- Highlights Heading -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <LinearLayout
+                android:id="@+id/StoreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Store Name"
+                    android:textColor="@color/black"/>
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <TextView
+                        android:id="@+id/tvStoreNameDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#7474F1"
+                        android:background="@drawable/text_view_selector" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/FeedbackScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Feedback Score"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvFeedbackScoreDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Popularity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="MissingClass">
+
+                <TextView
+                    android:layout_width="198dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Popularity"
+                    android:textColor="@color/black"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvPopularityDetail"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_weight="1"/>-->
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/circularProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:indeterminate="false"
+                        android:progressDrawable="@drawable/circular_progress_bar"
+                        android:max="100"
+                        android:progress="10"/>
+
+                    <TextView
+                        android:id="@+id/progressText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="10"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/FeedbackStar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Feedback Star"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/ivFeedbackStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="87dp"
+                    android:layout_marginTop="8dp"/>
+
+                <!--                <TextView-->
+<!--                    android:id="@+id/tvFeedbackStarDetail"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_weight="1"/>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Price Detail -->
+
+
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3"
+            android:layout_marginVertical="8dp" />
+
+        <!-- Specifications Heading -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ferry"
+                android:paddingRight="8dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shipping Info"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <!-- Price Detail -->
+            <LinearLayout
+                android:id="@+id/ShippingCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Shipping Cost"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvShippingCostDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/GlobalShipping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Global Shipping "
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvGlobalShippingDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/HandlingTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Handling Time"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvHandlingTimeDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3"
+            android:layout_marginVertical="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dump_truck"
+                android:paddingRight="8dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Return Policy"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <LinearLayout
+                android:id="@+id/Policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Policy"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvPolicyDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ReturnsWithin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Returns Within"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvReturnWithinDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/RefundMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Refund Mode"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvRefundModeDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ShippedBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:text="Shipped By"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvShippedByDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Price Detail -->
+
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

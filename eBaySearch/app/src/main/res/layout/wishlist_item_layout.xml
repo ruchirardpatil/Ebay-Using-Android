@@ -1,0 +1,108 @@
+<!-- ebay_item_layout.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:id="@+id/wish_cardView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/wish_imageViewItem"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/app_logo_with_background" />
+
+        <TextView
+            android:id="@+id/wish_textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Item Title"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="#95131313"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/wish_textViewZipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Zip: 900**"
+                    android:textAppearance="?attr/textAppearanceListItemSmall"
+                    android:textSize="12dp"
+                    android:textColor="#95131313"/>
+
+                <TextView
+                    android:id="@+id/wish_textViewShippingInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipping Info"
+                    android:textAppearance="?attr/textAppearanceListItemSmall"
+                    android:textSize="12dp"
+                    android:textColor="#95131313"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/wish_imageViewCart"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cart_plus" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/wish_textViewCondition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="New"
+                android:textAppearance="?attr/textAppearanceListItemSmall"
+                android:textSize="12dp"
+                android:textColor="#95131313"/>
+
+            <TextView
+                android:id="@+id/wish_textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$484.95"
+                android:layout_gravity="end"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold"
+                android:textSize="13dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

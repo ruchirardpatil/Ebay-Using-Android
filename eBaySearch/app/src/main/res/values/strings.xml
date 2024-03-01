@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">eBay Search</string>
+    <string name="keyword_hint">Enter Keyword</string>
+    <string name="new_condition">New</string>
+    <string name="used_condition">Used</string>
+    <string name="unspecified_condition">Unspecified</string>
+    <string name="local_pickup">Local Pickup</string>
+    <string name="free_shipping">Free Shipping</string>
+    <string name="enable_nearby_search">Enable Nearby Search</string>
+    <string name="distance_hint">Miles from</string>
+    <string name="current_location">Current Location</string>
+    <string name="zipcode">Zipcode</string>
+    <string name="search">Search</string>
+    <string name="clear">Clear</string>
+    <string name="keyword">Keyword</string>
+    <string name="current_location2">Current Location</string>
+    <string-array name="category_array">
+        <item>All </item>
+        <item>Art</item>
+        <item>Baby</item>
+        <item>Books</item>
+        <item>Clothing, Shoes &amp; Accessories</item>
+        <item>Computer/Tablets &amp; Networking</item>
+        <item>Health &amp; Beauty</item>
+        <item>Music</item>
+        <item>Video Games &amp; Consoles</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>Default</item>
+        <item>Name</item>
+        <item>Price</item>
+        <item>Days</item>
+    </string-array>
+    <string-array name="order_options">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

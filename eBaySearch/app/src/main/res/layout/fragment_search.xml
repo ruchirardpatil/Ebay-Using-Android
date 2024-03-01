@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Keyword EditText -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/keyword" />
+
+        <EditText
+            android:id="@+id/edittext_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/keyword_hint"
+            android:minHeight="48dp"
+            android:autofillHints=""
+            android:inputType="text" />
+        <TextView
+            android:id="@+id/textview_keyword_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter mandatory field"
+            android:visibility="gone"
+            android:textColor="@color/orange" />
+
+        <!-- Category Spinner -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category" />
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <!-- Condition CheckBoxes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condition" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkbox_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_condition"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/used_condition" />
+
+            <CheckBox
+                android:id="@+id/checkbox_unspecified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unspecified_condition" />
+        </LinearLayout>
+
+        <!-- Shipping Options CheckBoxes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shipping" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkbox_local_pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/local_pickup" />
+
+            <CheckBox
+                android:id="@+id/checkbox_free_shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/free_shipping" />
+        </LinearLayout>
+
+        <!-- Enable Nearby Search CheckBox -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enable_nearby_search" />
+
+        <CheckBox
+            android:id="@+id/checkbox_enable_nearby_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="DuplicateSpeakableTextCheck"/>
+
+    </LinearLayout>
+
+        <!-- Nearby Search Options -->
+        <LinearLayout
+            android:id="@+id/layout_nearby_search_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Distance EditText -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distance" />
+
+            <EditText
+                android:id="@+id/edittext_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/distance_hint"
+                android:inputType="number"
+                android:minHeight="48dp" />
+
+            <!-- Location RadioButtons -->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:paddingBottom="0dp">
+
+                    <RadioButton
+                        android:id="@+id/radiobutton_current_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/current_location2"
+                        android:textSize="15dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="0dp">
+
+                        <RadioButton
+                            android:id="@+id/radiobutton_zipcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/edittext_zipcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="zipcode" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/textview_zipcode_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Please enter mandatory field"
+                        android:visibility="gone"
+                        android:textColor="@color/orange" />
+                </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Search and Clear Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/button_search"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/orange"/>
+
+            <Button
+                android:id="@+id/button_clear"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/clear"
+                android:backgroundTint="@color/orange"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

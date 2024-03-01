@@ -1,0 +1,5 @@
+<!-- res/drawable/text_view_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/Silver" android:state_pressed="true"/> <!-- Grey color when pressed -->
+    <item android:drawable="@android:color/transparent"/> <!-- Transparent normally -->
+</selector>
